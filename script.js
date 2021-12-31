@@ -10,7 +10,8 @@ let numberOptions = "0123456789".split("");
 let specialCharacterOptions = "!@#$%^&*()-_+={}[]".split("");
 
 
-
+let lengthOfPw = prompt("How many characters would you like in your password, from 8-128?");
+    console.log(lengthOfPw);
 let upperChoice = window.confirm("Would you like uppercase letters?");
     console.log(upperChoice);
 let lowerChoice = window.confirm("Would you like lowercase letters?");
@@ -26,10 +27,7 @@ let specialCharChoice = window.confirm("Would you like special characters?");
 
 function arrayConcatenation() {
      let parameterSelections = [];
-     if (upperChoice && lowerChoice && numbers && specialCharChoice === false) {
-         alert("Please make at least one selection.");
-         return;
-     } if (upperChoice === true) {
+       if (upperChoice === true) {
          parameterSelections = parameterSelections.concat(upperAbcOptions);
      } if (lowerChoice === true) {
          parameterSelections = parameterSelections.concat(lowerAbcOptions);
@@ -40,18 +38,17 @@ function arrayConcatenation() {
      }
      return parameterSelections;
 
-    }
+    };
 
 
-
-// }
 
 // function commitPassword () {
-//     passwordChoices();
-//     for (let i = 0; i < `${specialCharChoice}`.length; i++) {
-//         const element = array[i];
+//      parameterSelections();
+//      newRandomArray [];
+//     for (let i = 0; i < .length; i++) {
+//          const element = array[i];
         
-//     }
+
     
 
 
