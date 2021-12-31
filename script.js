@@ -1,76 +1,81 @@
-// Assignment Code
-let generateBtn = document.querySelector("#generate");
-let lowerAlphabet = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
-let upperAlphabet = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
-let numberChoice = "0123456789".split("");
-let specialCharacters = "!@#$%^&*()-_+={}[]".split("");
-let selectedArrayPassword = [...lowerAlphabet, ...upperAlphabet, ...numberChoice, ...specialCharacters];
 
+let passwordText = document.querySelector("#password");
 
-function writePassword() {
-  let password = generatePassword();
-  let passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-function generatePassword() {
-
-  return "";
-
-}
-
-generateBtn.addEventListener("click", writePassword);
-
-
-let passwordLength = prompt("Choose length of password between 8-128 characters");
-console.log(passwordLength);
-let upperChoice = prompt("Would you like lower case letters, Y or N");
-console.log(upperChoice);
-let lowerChoice = prompt("Would you like upper case letters, Y or N");
-console.log(lowerChoice);
-let numbers = prompt("Would you like numbers, Y or N");
-console.log(numbers);
-let specialCharChoice = prompt("Would you like special characters, Y or N");
-console.log(specialCharChoice);
+    passwordText.value = password;
     
-let randomLowerAlphabet = Math.floor(Math.random()*lowerAlphabet.length);
-let randomUpperAlphabet = Math.floor(Math.random()*upperAlphabet.length);
-let randomNumberChoice = Math.floor(Math.random()*numberChoice.length);
-let randomSpecialCharacters = Math.floor(Math.random()*specialCharacters.length);
-
-for (let i = 0; i < passwordLength; i++) {
-  console.log(i)
-  
-}
+let generateBtn = document.querySelector("#generate");
+let lowerAbcOptions = "abcdefghijklmnopqrstuvwxyz".split("");
+let upperAbcOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+let numberOptions = "0123456789".split("");
+let specialCharacterOptions = "!@#$%^&*()-_+={}[]".split("");
 
 
 
+let upperChoice = window.confirm("Would you like uppercase letters?");
+    console.log(upperChoice);
+let lowerChoice = window.confirm("Would you like lowercase letters?");
+    console.log(lowerChoice);
+let numbers = window.confirm("would you like numbers?");
+    console.log(numbers);
+let specialCharChoice = window.confirm("Would you like special characters?");
+    console.log(specialCharChoice);
 
 
 
+//code to set up user selections
+
+function arrayConcatenation() {
+     let parameterSelections = [];
+     if (upperChoice && lowerChoice && numbers && specialCharChoice === false) {
+         alert("Please make at least one selection.");
+         return;
+     } if (upperChoice === true) {
+         parameterSelections = parameterSelections.concat(upperAbcOptions);
+     } if (lowerChoice === true) {
+         parameterSelections = parameterSelections.concat(lowerAbcOptions);
+     } if (numbers === true) {
+         parameterSelections = parameterSelections.concat(numbers);
+     } if (specialCharChoice === true) {
+         parameterSelections = parameterSelections.concat(specialCharChoice);
+     }
+     return parameterSelections;
+
+    }
 
 
 
+// }
 
-// upperAlphabet[randomNumber]
+// function commitPassword () {
+//     passwordChoices();
+//     for (let i = 0; i < `${specialCharChoice}`.length; i++) {
+//         const element = array[i];
+        
+//     }
+    
 
-// for (i = 0; i < 100; i++) {
-  
-//   console.log(upperAlphabet[randomNumber])  
+
+    
+// }
+
+// function generatePassword() {
+//     return password;
 // }
 
 
-// let password = "";
-// for (let i = 0; i < 100; i++) {
-//   password+= upperAlphabet = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
-// }
 
-// console.log(password);
-
-
-// // Write password to the #password input
+// let randomLowerAlphabet = Math.floor(Math.random()*lowerAbcOptions.length);
+// let randomUpperAlphabet = Math.floor(Math.random()*upperAbcOptions.length);
+// let randomNumberChoice = Math.floor(Math.random()*numberChoice.length);
+// let randomSpecialCharacters = Math.floor(Math.random()*specialCharacterOptions.length);
 
 
 
+
+
+
+
+
+
+
+generateBtn.addEventListener("click", commitPassword);
