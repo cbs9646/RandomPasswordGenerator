@@ -46,14 +46,15 @@ function arrayConcatenation() {
     }
 
 
- function newPassword () {
+
+ function newPassword() {
       parameterSelections();
-      newRandomArray [];
+     newRandomArray = [];
       for (let i = 0; i < lengthOfPw.valueOf; i++) {
            let randomNumberGeneration = Math.floor(Math.random()*parameterSelections.length);
            newRandomArray = newRandomArray.concat(parameterSelections[randomNumberGeneration]);
       }
         return newRandomArray.join('');
-    }
+}
         
 generateBtn.addEventListener("click", commitPassword);
