@@ -42,11 +42,12 @@ function arrayConcatenation() {
 
 
 
-// function commitPassword () {
-//      parameterSelections();
-//      newRandomArray [];
-//     for (let i = 0; i < .length; i++) {
-//          const element = array[i];
+ function commitPassword () {
+      parameterSelections();
+      newRandomArray [];
+      for (let i = 0; i < lengthOfPw.valueOf; i++) {
+           let randomNumberGeneration = Math.floor(Math.random()*parameterSelections.length);
+           newRandomArray = newRandomArray.concat(parameterSelections[randomNumberGeneration]);
         
 
     
