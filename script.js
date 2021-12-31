@@ -1,9 +1,14 @@
-
-let passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
-    
 let generateBtn = document.querySelector("#generate");
+
+
+function commitPassword() {
+    let generatedPassword = newPassword();
+    let passwordText = document.querySelector("#password");
+    passwordText.value = generatedPassword;
+    arrayConcatenation();
+    
+}
+
 let lowerAbcOptions = "abcdefghijklmnopqrstuvwxyz".split("");
 let upperAbcOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 let numberOptions = "0123456789".split("");
@@ -38,42 +43,17 @@ function arrayConcatenation() {
      }
      return parameterSelections;
 
-    };
+    }
 
 
-
- function commitPassword () {
+ function newPassword () {
       parameterSelections();
       newRandomArray [];
       for (let i = 0; i < lengthOfPw.valueOf; i++) {
            let randomNumberGeneration = Math.floor(Math.random()*parameterSelections.length);
            newRandomArray = newRandomArray.concat(parameterSelections[randomNumberGeneration]);
+      }
+        return newRandomArray.join('');
+    }
         
-
-    
-
-
-    
-// }
-
-// function generatePassword() {
-//     return password;
-// }
-
-
-
-// let randomLowerAlphabet = Math.floor(Math.random()*lowerAbcOptions.length);
-// let randomUpperAlphabet = Math.floor(Math.random()*upperAbcOptions.length);
-// let randomNumberChoice = Math.floor(Math.random()*numberChoice.length);
-// let randomSpecialCharacters = Math.floor(Math.random()*specialCharacterOptions.length);
-
-
-
-
-
-
-
-
-
-
 generateBtn.addEventListener("click", commitPassword);
